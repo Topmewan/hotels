@@ -1,0 +1,28 @@
+.default {
+  min-width: 50px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all .3s ease;
+
+  &:active{
+    transform: scale(1.08);
+  }
+}
+
+
+
+.primary{
+  padding: 10px;
+  color: white;
+  background-color: dodgerblue;
+}
