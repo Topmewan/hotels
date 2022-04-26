@@ -1,6 +1,7 @@
 import styles from './Home.module.scss';
 import {Featured} from "../../components/Featured";
 import {Row} from "../../components/Row";
+import {russia} from "../../utils/data/mock.data";
 
 
 export const Home = () => {
@@ -11,7 +12,9 @@ export const Home = () => {
         <Featured/>
         <Featured/>
       </div>
-      <Row/>
+      <Row data={russia} title='Russia today'/>
+      <Row data={russia} title='Russia today'/>
+
     </div>
   );
 };
