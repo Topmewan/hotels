@@ -1,16 +1,19 @@
 import React, {useContext} from 'react';
-import {HeaderContext} from "../../contexts/HeaderContext";
+import {HeaderContext} from "../../../contexts/HeaderContext";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBed, faCalendarDay, faCar, faPerson, faPlane, faTaxi} from "@fortawesome/free-solid-svg-icons";
-import UiButton from "../Ui/UiButton";
-import OptionCounter from "../OptionCounter";
+import UiButton from "../../Ui/UiButton";
+import OptionCounter from "../../OptionCounter";
 import {DateRange} from 'react-date-range';
 import {format} from "date-fns";
+import {useLocation} from "react-router-dom";
 
 import styles from './Header.module.scss';
 
-export const Header = ({type}) => {
+export const Header = () => {
+
+  const {pathname} = useLocation();
 
   const {
     status,
@@ -26,7 +29,7 @@ export const Header = ({type}) => {
 
   return (
     <header className={styles.header}>
-      <div className={`${styles.container} ${type === 'list' && styles.clear}`}>
+      <div className={`${styles.container} ${pathname !== '/' && styles.clear}`}>
         <div className={styles.list}>
           <div className={`${styles.item} ${status === 'stays' && styles.active}`} onClick={() => setStatus('stays')}>
             <FontAwesomeIcon icon={faBed}/>
@@ -51,7 +54,7 @@ export const Header = ({type}) => {
             <span>Airport taxi</span>
           </div>
         </div>
-        {type !== 'list' &&
+        {pathname === '/' &&
           <>
             <h1 className={styles.title}>A lifetime of discounts? It's Genius.</h1>
             <p className={styles.desc}>

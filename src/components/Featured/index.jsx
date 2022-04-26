@@ -1,10 +1,9 @@
 import React from 'react';
 
-export const List = () => {
+export const Featured = () => {
   return (
     <div>
-      hotels
-      
+
     </div>
   );
 };
