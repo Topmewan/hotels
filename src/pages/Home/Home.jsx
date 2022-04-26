@@ -1,12 +1,15 @@
 import React from 'react';
 import Navbar from "../../components/Navbar";
-import Header from "../../components/Header";
+import {HeaderProvider} from "../../providers/HeaderProvider";
+import {Header} from "../../components/Header";
 
 const Home = () => {
   return (
     <div>
       <Navbar/>
-      <Header/>
+      <HeaderProvider>
+        <Header/>
+      </HeaderProvider>
     </div>
   );
 };

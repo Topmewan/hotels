@@ -10,21 +10,45 @@
   }
 
   .operation{
+    margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
 
-    >{
-      span{
-        color: black;
-      }
+
+    .count{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 44px;
+      color: black;
+      font-size: 18px;
+
     }
 
 
     button{
-      min-width: 30px;
-      height: 30px;
+      width: 44px;
+      height: 44px;
+      border: 2px solid dodgerblue;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all .3s ease;
+      font-size: 1.6rem;
+      border-radius: 100%;
+
+      &:active{
+        transform: scale(1.08);
+      }
+
+      &:disabled{
+        pointer-events: none;
+        opacity: 0.5;
+      }
     }
   }
 }
