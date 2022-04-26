@@ -1,0 +1,44 @@
+.featured {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  .top {
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  .body {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    }
+    > {
+      h1 {
+        font-size: 2.5vw;
+
+      }
+
+      h2 {
+        font-size: 2vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+      }
+  }
+}

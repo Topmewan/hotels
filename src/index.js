@@ -5,7 +5,6 @@ import {HeaderProvider} from "./providers/HeaderProvider";
 import {BrowserRouter} from "react-router-dom";
 import './index.scss';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

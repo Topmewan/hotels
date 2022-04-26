@@ -1,0 +1,12 @@
+.row {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  overflow: scroll hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.row::-webkit-scrollbar{
+  display: none;
+}

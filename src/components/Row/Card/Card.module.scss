@@ -1,0 +1,38 @@
+.card {
+  flex: 1 0 auto;
+  width: calc(16.6666% - 16.6666px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media screen and (max-width: 769px) {
+    width: calc(33.333% - 13.333px);
+  }
+
+  .top {
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h1 {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+
+}

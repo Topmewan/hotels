@@ -1,6 +1,5 @@
 .header {
   width: 100%;
-
   background-color: #003580;
   color: #ffff;
 
@@ -9,6 +8,7 @@
     max-width: 1056px;
     padding: 20px 1rem 80px 1rem;
     margin: 0 auto;
+    z-index: 10;
 
     .list {
       display: flex;
@@ -67,6 +67,11 @@
           span {
             color: lightgray;
             cursor: pointer;
+
+            @media screen and(max-width: 768px) {
+              display: none;
+
+            }
           }
         }
 
@@ -91,6 +96,7 @@
 
 
         .options {
+          background-color: #fff;
           width: 300px;
           max-height: 206px;
           display: flex;
