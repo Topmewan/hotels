@@ -7,7 +7,7 @@
   .container {
     position: relative;
     max-width: 1056px;
-    padding: 20px 1rem 100px 1rem;
+    padding: 20px 1rem 80px 1rem;
     margin: 0 auto;
 
     .list {
@@ -52,7 +52,7 @@
       border-radius: 5px;
       position: relative;
       padding: 25px 0;
-      top: 127.5px;
+      top: 107.5px;
 
       .icon {
         color: lightgray;
@@ -63,8 +63,10 @@
         align-items: center;
         gap: 10px;
 
-        span{
-          color: lightgray;
+        >{
+          span{
+            color: lightgray;
+          }
         }
 
         input{
@@ -77,6 +79,19 @@
           top: 100%;
 
         }
+
+        .options{
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          max-width: 300px;
+          border: 1px solid black;
+          display: flex;
+          flex-direction: column;
+
+
+        }
+
       }
 
     }

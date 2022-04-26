@@ -1,0 +1,30 @@
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > {
+    span{
+      color: black;
+    }
+  }
+
+  .operation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    >{
+      span{
+        color: black;
+      }
+    }
+
+
+    button{
+      min-width: 30px;
+      height: 30px;
+    }
+  }
+}

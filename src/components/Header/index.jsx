@@ -1,17 +1,17 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBed,faCalendarDay, faCar, faPerson, faPlane, faTaxi} from "@fortawesome/free-solid-svg-icons";
+import {faBed, faCalendarDay, faCar, faPerson, faPlane, faTaxi} from "@fortawesome/free-solid-svg-icons";
 import UiButton from "../Ui/UiButton";
-import { DateRange } from 'react-date-range';
+import {DateRange} from 'react-date-range';
 import {format} from "date-fns";
 
 import styles from './Header.module.scss';
-
+import OptionCounter from "../OptionCounter";
 
 
 const Header = () => {
   const [status, setStatus] = useState('');
-  const [openDate,setOpenDate] = useState(false);
+  const [openDate, setOpenDate] = useState(false);
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -20,7 +20,22 @@ const Header = () => {
     }
   ]);
 
-  const  openOrCloseDate = () => {
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 1,
+    room: 1
+  })
+
+  const handleOption = (opt, operation) => {
+    setOptions((prev) => ({
+      ...prev, [opt]: operation === 'i'
+        ? options[opt] + 1
+        : options[opt] - 1
+    }))
+  }
+
+
+  const openOrCloseDate = () => {
     setOpenDate(prev => !prev)
   }
 
@@ -82,12 +97,19 @@ const Header = () => {
           </div>
           <div className={styles.item}>
             <FontAwesomeIcon icon={faPerson} className={styles.icon}/>
-            <span className={styles.text}>2 adults 2 children</span>
+            <span
+              className={styles.text}>{`${options.adult} adult  ${options.children} children  ${options.room} room`}</span>
+
+            <div className={styles.options}>
+              <OptionCounter title='adult' count={options.adult} onClick={handleOption}/>
+              <OptionCounter title='children' count={options.adult} onClick={handleOption}/>
+              <OptionCounter title='room' count={options.adult} onClick={handleOption}/>
+
+            </div>
 
           </div>
 
           <UiButton variant='primary'>Search</UiButton>
-
 
         </div>
       </div>
