@@ -4,7 +4,7 @@ import {HeaderContext} from "../../../contexts/HeaderContext";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBed, faCalendarDay, faCar, faPerson, faPlane, faTaxi} from "@fortawesome/free-solid-svg-icons";
 import UiButton from "../../Ui/UiButton";
-import OptionCounter from "../../OptionCounter";
+import OptionCounter from "../../../pages/Home/OptionCounter";
 import {DateRange} from 'react-date-range';
 import {format} from "date-fns";
 import {useLocation} from "react-router-dom";

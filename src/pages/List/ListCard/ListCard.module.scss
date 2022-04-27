@@ -1,0 +1,91 @@
+.wrapper {
+  flex: 1;
+  display: flex;
+  padding: 10px;
+  border: 2px solid rgba(177, 167, 162, 0.25);
+  border-radius: 5px;
+  gap: 20px;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+
+  }
+
+  span {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .first {
+    width: 200px;
+    background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/square600/280808265.webp?k=ba731a8bc177f2c340790bda085d7d1ae971fe4082b0c493f1e1f1e6a04904d0&o=&s=1");
+    background-size: cover;
+    background-position: center center;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .second {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      font-size: 20px;
+      color: dodgerblue;
+    }
+
+    .button {
+      width: 150px;
+    }
+  }
+
+  .third {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    @media screen and (max-width: 900px) {
+      margin: 0;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: auto;
+      @media screen and (max-width: 900px) {
+        margin-bottom: 20px;
+      }
+
+      .rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        background-color: #003580;
+        color: #fff;
+      }
+    }
+
+    > {
+      span {
+        &:nth-of-type(1) {
+          font-size: 23px;
+          color: #000;
+          margin-bottom: 10px;
+        }
+
+        &:nth-of-type(2) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+
+  }
+}

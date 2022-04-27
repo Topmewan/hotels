@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.module.scss';
-import UiButton from "../Ui/UiButton";
+import UiButton from "../../../Ui/UiButton";
 
 export const Contact = () => {
   return (

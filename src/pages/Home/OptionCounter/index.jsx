@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './OptionCounter.module.scss';
-import {toUpperFirst} from "../../utils/heplers/string.heplers";
+import {toUpperFirst} from "../../../utils/heplers/string.heplers";
 
 const OptionCounter = ({title, count, onClick}) => {
 

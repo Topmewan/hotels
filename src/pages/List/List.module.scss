@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+  }
+
+
+  .list{
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+}

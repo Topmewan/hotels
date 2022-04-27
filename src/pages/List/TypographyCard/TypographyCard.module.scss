@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #000;
+
+  p{
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  span{
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+}
+
+.green{
+  color: green;
+}
