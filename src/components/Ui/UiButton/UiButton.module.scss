@@ -12,24 +12,21 @@
   background-color: #fff;
   font-size: 1rem;
   font-weight: 500;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
-  &:active{
+  &:active {
     transform: scale(1.08);
   }
 }
 
-
-
-.primary{
+.primary {
   padding: 10px;
   color: white;
   background-color: dodgerblue;
-
 }
 
-.secondary{
-  padding:5px 5px ;
+.secondary {
+  padding: 5px 5px;
   background-color: green;
   color: white;
   font-size: 12px;

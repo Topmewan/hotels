@@ -1,19 +1,18 @@
 import React from 'react';
-import {Search} from "./Search";
+import { Search } from './Search';
 
 import styles from './List.module.scss';
-import {ListCard} from "./ListCard";
+import { ListCard } from './ListCard';
 
 export const List = () => {
   return (
     <div className={styles.wrapper}>
-      <Search/>
+      <Search />
       <div className={styles.list}>
-        <ListCard/>
-        <ListCard/>
-        <ListCard/>
+        <ListCard />
+        <ListCard />
+        <ListCard />
       </div>
     </div>
   );
 };
-

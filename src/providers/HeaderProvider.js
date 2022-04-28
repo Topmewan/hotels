@@ -1,40 +1,38 @@
-import {HeaderContext} from "../contexts/HeaderContext";
-import {useState} from "react";
+import { HeaderContext } from '../contexts/HeaderContext';
+import { useState } from 'react';
 
-export const HeaderProvider = ({children}) => {
-
+export const HeaderProvider = ({ children }) => {
   const [status, setStatus] = useState('');
 
   const [open, setOpen] = useState({
     options: false,
-    date: false
-  })
+    date: false,
+  });
 
   const [date, setDate] = useState([
     {
       startDate: new Date(),
       endDate: new Date(),
-      key: 'selection'
-    }
+      key: 'selection',
+    },
   ]);
 
   const [options, setOptions] = useState({
     adult: 1,
     children: 1,
-    room: 1
-  })
+    room: 1,
+  });
 
   const handleOption = (opt, operation) => {
     setOptions((prev) => ({
-      ...prev, [opt]: operation === 'i'
-        ? options[opt] + 1
-        : options[opt] - 1
-    }))
-  }
+      ...prev,
+      [opt]: operation === 'i' ? options[opt] + 1 : options[opt] - 1,
+    }));
+  };
 
   const handleOpen = (value) => {
-    setOpen(prev => ({...!prev, [value]: !open[value]}))
-  }
+    setOpen((prev) => ({ ...!prev, [value]: !open[value] }));
+  };
 
   const data = {
     status,
@@ -44,12 +42,10 @@ export const HeaderProvider = ({children}) => {
     options,
     open,
     handleOption,
-    handleOpen
-  }
+    handleOpen,
+  };
 
   return (
-    <HeaderContext.Provider value={data}>
-      {children}
-    </HeaderContext.Provider>
-  )
-}
+    <HeaderContext.Provider value={data}>{children}</HeaderContext.Provider>
+  );
+};

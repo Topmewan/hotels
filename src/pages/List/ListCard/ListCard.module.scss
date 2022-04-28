@@ -8,7 +8,6 @@
 
   @media screen and (max-width: 900px) {
     flex-direction: column;
-
   }
 
   span {
@@ -18,7 +17,7 @@
 
   .first {
     width: 200px;
-    background-image: url("https://t-cf.bstatic.com/xdata/images/hotel/square600/280808265.webp?k=ba731a8bc177f2c340790bda085d7d1ae971fe4082b0c493f1e1f1e6a04904d0&o=&s=1");
+    background-image: url('https://t-cf.bstatic.com/xdata/images/hotel/square600/280808265.webp?k=ba731a8bc177f2c340790bda085d7d1ae971fe4082b0c493f1e1f1e6a04904d0&o=&s=1');
     background-size: cover;
     background-position: center center;
 
@@ -85,7 +84,5 @@
         }
       }
     }
-
-
   }
 }

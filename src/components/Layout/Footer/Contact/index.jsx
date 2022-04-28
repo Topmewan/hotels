@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Contact.module.scss';
-import UiButton from "../../../Ui/UiButton";
+import UiButton from '../../../Ui/UiButton';
 
 export const Contact = () => {
   return (
@@ -10,12 +10,13 @@ export const Contact = () => {
         <span>Подпишитесь? и мы вышлем вам лучшее предложение</span>
         <form>
           <div className={styles.subscribe}>
-            <input type="text" placeholder='Ваш электронный адрес'/>
-            <UiButton variant='primary' type='submit'>Subscribe</UiButton>
+            <input type="text" placeholder="Ваш электронный адрес" />
+            <UiButton variant="primary" type="submit">
+              Subscribe
+            </UiButton>
           </div>
         </form>
       </div>
     </section>
   );
 };
-

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
-import UiButton from "../../Ui/UiButton";
+import UiButton from '../../Ui/UiButton';
 
 const Navbar = () => {
   return (
