@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Search.module.scss';
 import UiButton from '../../../components/Ui/UiButton';
+import { DateRange } from 'react-date-range';
+import { format } from 'date-fns';
 
 export const Search = () => {
+  const [hotelsDate, setHotelsDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: 'selection',
+    },
+  ]);
+
+  const [open, setOpen] = useState(false);
+
   return (
     <div className={styles.wrapper}>
       <h1>Search</h1>
@@ -13,7 +25,19 @@ export const Search = () => {
         </div>
         <div className={styles.input}>
           <label>Check-in date</label>
-          <input type="text" />
+          <p onClick={() => setOpen((prev) => !prev)}>
+            {`${format(hotelsDate[0].startDate, 'MM/dd/yyyy')}
+               to ${format(hotelsDate[0].endDate, 'MM/dd/yyyy')}`}
+          </p>
+          {open && (
+            <DateRange
+              editableDateInputs={true}
+              onChange={(item) => setHotelsDate([item.selection])}
+              moveRangeOnFirstSelection={false}
+              ranges={hotelsDate}
+              className={styles.date}
+            />
+          )}
         </div>
 
         <span>Options</span>

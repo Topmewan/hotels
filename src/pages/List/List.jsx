@@ -12,6 +12,11 @@ export const List = () => {
         <ListCard />
         <ListCard />
         <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
+        <ListCard />
       </div>
     </div>
   );
