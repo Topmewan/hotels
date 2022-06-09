@@ -19,7 +19,6 @@
 
   .image {
     width: 60%;
-    height: 60%;
     position: relative;
     top: 50%;
     left: 50%;
@@ -27,24 +26,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 1024px) {
-      width: 70%;
-      height: 70%;
-    }
+    background-color: red;
 
     @media (max-width: 940px) {
       width: 90%;
-      height: 90%;
-    }
-    @media (max-width: 600px) {
-      width: 100%;
-      height: 100%;
     }
 
     .action {
       position: absolute;
-      padding: 20px;
       outline: none;
       background-color: transparent;
       border: none;
@@ -59,39 +48,36 @@
         transform: scale(1.1);
       }
 
-      &.close {
-        bottom: 110%;
-      }
-
       &.left {
-        right: 100%;
-        @media (max-width: 940px) {
-          right: 90%;
+        left: -30px;
+
+        @media (max-width: 500px) {
+          left: -15px;
           font-size: 20px;
         }
         @media (max-width: 500px) {
-          right: 86%;
+          left: -14px;
         }
       }
 
       &.right {
-        left: 100%;
-        @media (max-width: 940px) {
-          left: 90%;
+        right: -30px;
+
+        @media (max-width: 500px) {
+          right: -15px;
           font-size: 20px;
         }
         @media (max-width: 500px) {
-          left: 86%;
+          right: -14px;
         }
       }
     }
 
     img {
-      width: 100%;
+      max-width: 100%;
       object-fit: cover;
-      @media (max-width: 768px) {
-        width: 80%;
-      }
+      height: auto;
+      object-position: center center;
     }
   }
 }
