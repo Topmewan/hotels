@@ -1,0 +1,18 @@
+.amount {
+  background-color: #ebf3ff;
+  flex: 1;
+  min-width: 282px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  h2 {
+    font-size: 20px;
+    color: #555;
+  }
+
+  h3 {
+    font-weight: 300;
+  }
+}

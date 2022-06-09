@@ -13,10 +13,10 @@ const Navbar = () => {
         <Link to="/hotels">
           <span>Hotels</span>
         </Link>
-        <div className={styles.buttons}>
+        {/* <div className={styles.buttons}>
           <UiButton>Register</UiButton>
           <UiButton>Login</UiButton>
-        </div>
+        </div> */}
       </div>
     </div>
   );

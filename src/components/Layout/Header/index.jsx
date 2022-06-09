@@ -78,6 +78,7 @@ export const Header = () => {
             <span>Airport taxi</span>
           </div>
         </div>
+
         {pathname === '/' && (
           <>
             <h1 className={styles.title}>
