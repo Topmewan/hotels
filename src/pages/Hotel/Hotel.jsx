@@ -1,6 +1,8 @@
-import styles from './Hotel.module.scss';
 import UiButton from '../../components/Ui/UiButton';
 import { Amount } from './Amount/Amount';
+import styles from './Hotel.module.scss';
+import { Slider } from './Slider/Slider';
+import { useSlider } from './useSlider';
 
 const photos = [
   {
@@ -24,8 +26,19 @@ const photos = [
 ];
 
 export const Hotel = () => {
+  const { isOpen, handleClose, handleOpen, handleMove, sliderIndex } =
+    useSlider();
+
   return (
     <div className={styles.hotel}>
+      <Slider
+        isOpen={isOpen}
+        onClose={handleClose}
+        handleMove={handleMove}
+        index={sliderIndex}
+        photos={photos}
+      />
+
       <section className={styles.top}>
         <div className={styles.info}>
           <h1 className={styles.title}>Tower Street Apartments</h1>
@@ -42,7 +55,11 @@ export const Hotel = () => {
 
       <section className={styles.gallery}>
         {photos.map((photo, idx) => (
-          <div className={styles.item} key={idx + 1}>
+          <div
+            className={styles.item}
+            key={idx}
+            onClick={() => handleOpen(idx)}
+          >
             <img src={photo.src} alt="gallery-item" />
           </div>
         ))}
